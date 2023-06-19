@@ -16,6 +16,8 @@ function Login() {
   const handleLogin = (event) => {
     event.preventDefault();
 
+    throw new Error("error api");
+
     axios.post("/api/auth/login", { email, password })
     .then((response) => {
       localStorage.setItem("token", response?.data?.token);
