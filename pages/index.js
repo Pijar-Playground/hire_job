@@ -3,7 +3,19 @@ import Link from "next/link";
 import Navigations from "@/components/Navigations";
 import Footer from "@/components/Footer";
 
+import { useSelector, useDispatch } from "react-redux";
+import { increment} from '@/store/reducers/counterSlice'
+
 export default function Home() {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+
+  console.log(state)
+
+  const handleCounter = () => {
+    dispatch(increment());
+  }
+
   return (
     <>
       <main>
@@ -25,6 +37,13 @@ export default function Home() {
                   Mulai Dari Sekarang
                 </button>
               </Link>
+
+              <button
+                className="btn btn-primary btn-lg"
+                onClick={handleCounter}
+              >
+                Counter : {state.counterSlice.value}
+              </button>
             </div>
             <div className="col-md-5">
               <img src="/home_1.jpg" alt="Home Picture" />

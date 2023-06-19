@@ -3,7 +3,10 @@ import React from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
+import { useSelector } from "react-redux";
+
 function Login() {
+  const state = useSelector((state) => state);
   const router = useRouter();
 
   const [email, setEmail] = React.useState("");
@@ -93,6 +96,12 @@ function Login() {
             <div className="d-grid">
               <button type="submit" class="btn btn-primary btn-lg">
                 Submit
+              </button>
+            </div>
+
+            <div className="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">
+                Counter : {state.counterSlice.value}
               </button>
             </div>
 
