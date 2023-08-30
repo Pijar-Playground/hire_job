@@ -1,9 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/index.scss";
 
+import Favicon from "@/components/Favicon";
 import Script from "next/script";
 import { Provider } from "react-redux";
-import { store } from "@/store"
+import { store } from "@/store";
 
 import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Favicon />
       <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-7G8S2BB6LG"

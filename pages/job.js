@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import { NextSeo } from "next-seo";
 
 import Navigations from "@/components/Navigations";
 import Footer from "@/components/Footer";
@@ -42,6 +43,11 @@ function Job(props) {
 
   return (
     <>
+      <NextSeo
+        title="Job - Hirejob"
+        description="Temukan berbagai lowongan pekerjaan terbaru di HireJob. Jelajahi daftar lengkap posisi pekerjaan dari berbagai industri, termasuk teknologi, kreatif, keuangan, dan banyak lagi."
+        canonical="https://hire-job-jade.vercel.app/job"
+      />
       <Navigations />
 
       <div className="container py-5">

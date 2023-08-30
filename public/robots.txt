@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hire-job-jade.vercel.app/
+
+# Sitemaps
+Sitemap: https://hire-job-jade.vercel.app/sitemap.xml

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 import Navigations from "@/components/Navigations";
 import Footer from "@/components/Footer";
@@ -10,14 +11,18 @@ export default function Home() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
-  console.log(state)
-
   const handleCounter = () => {
     dispatch(increment());
   }
 
   return (
     <>
+      <NextSeo
+        title="Cari kerja mudah disi ajah - Hirejob"
+        description="Selamat datang di HireJob, platform pilihan untuk mencari dan menawarkan pekerjaan terbaru di berbagai bidang."
+        canonical="https://hire-job-jade.vercel.app/"
+      />
+
       <main>
         <Navigations />
 
